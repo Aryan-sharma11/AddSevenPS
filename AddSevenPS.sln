@@ -12,5 +12,6 @@ Global
 		{49984BB5-D987-4043-A6B6-4C09CCD60730}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49984BB5-D987-4043-A6B6-4C09CCD60730}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49984BB5-D987-4043-A6B6-4C09CCD60730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49984BB5-D987-4043-A6B6-4C09CCD60730}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
