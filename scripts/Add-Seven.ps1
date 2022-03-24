@@ -6,8 +6,7 @@ dotnet build
 dotnet publish 
 
 <# Adding the module to the session #>
-Import-Module .\bin\Debug\AddSevenPS.dll
-
+Import-Module .\bin\Debug\net6.0\publish\AddSevenPS.dll
 
 do
     {
