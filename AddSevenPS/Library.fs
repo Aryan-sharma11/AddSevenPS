@@ -7,10 +7,13 @@ open System.Management.Automation.Runspaces
 // Cmdlet attribute declaration
 [<Cmdlet("Add", "Seven")>] 
 
+
 type GetNum() =
      
     // Inheriting the PSCmdlet class
     inherit PSCmdlet()
+    
+    let addSeven num = num + 7
     
     // Allows the cmdlet let to take default input
     // Positional parameter to allow Cmdlet to take input without specifying the variable
@@ -21,6 +24,6 @@ type GetNum() =
         // Typecasting String to Integer
         let num = this.Num |> int
         
-        this.WriteObject( 7 + num )
+        this.WriteObject( addSeven(7) )
         
         base.EndProcessing()
