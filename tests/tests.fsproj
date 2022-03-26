@@ -12,6 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FsUnit" Version="4.2.0" />
+    <PackageReference Include="FsUnit.xUnit" Version="4.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="NuGet.ProjectModel" Version="6.1.0" />
     <PackageReference Include="coverlet.collector" Version="3.1.0" />
