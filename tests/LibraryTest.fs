@@ -13,7 +13,7 @@ open AddSevenPS
 let `` AddSeven.addSeven on list of integers`` () =
      
      // A list with integers for testing
-     let actual = AddSeven.``Add seven to list`` [ 9 ; 25 ; -2 ; 5 ; 11 ]
+     let actual = AddSeven.addSevenToList [ 9 ; 25 ; -2 ; 5 ; 11 ]
      
      // Expected results for our test cases
      let expected = [ 16 ; 32 ; 5 ; 12 ; 18 ]
