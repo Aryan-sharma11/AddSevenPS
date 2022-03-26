@@ -8,11 +8,11 @@ module AddSeven =
     let addSeven num = num + 7
      
     // For testing purpose
-    // Recieving a list of integers and then returning the list with solutions mapped to the list 
-    let add7 numberseq =
+    //  Testing list of integers and then returning the list with solutions  
+    let add7 numList =
         
         // Mapping the solutions to the list of test cases
-        numberseq |> Seq.map addSeven
+        numList |> Seq.map addSeven
 
 
 // Cmdlet attribute declaration
