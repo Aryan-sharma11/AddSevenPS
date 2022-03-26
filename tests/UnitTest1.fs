@@ -23,7 +23,7 @@ type TestClass () =
         let expected = [ 9 ; 11 ; 13 ; 15 ; 17 ]
         
         // A list with integers for testing 
-        let actual = AddSeven.add7 [ 2 ; 4 ; 6 ; 8 ; 10 ]
+        let actual = AddSeven.``Add seven to list`` [ 2 ; 4 ; 6 ; 8 ; 10 ]
        
         // Determining that the result sequence is equal to our expected results
         Assert.That( actual , Is.EqualTo( expected ) )

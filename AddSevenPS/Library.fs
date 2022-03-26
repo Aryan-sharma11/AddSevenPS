@@ -9,7 +9,7 @@ module AddSeven =
      
     // For testing purpose
     //  Testing list of integers and then returning the list with solutions  
-    let add7 numList =
+    let ``Add seven to list`` numList =
         
         // Mapping the solutions to the list of test cases
         numList |> Seq.map addSeven
