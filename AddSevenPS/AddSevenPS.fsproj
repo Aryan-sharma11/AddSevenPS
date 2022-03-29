@@ -6,17 +6,20 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Library.fs" />
         <Compile Include="AddSeven.fs" />
+        <Compile Include="Library.fs" />
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="FsUnit" Version="4.2.0" />
+        <PackageReference Include="FsUnit.xUnit" Version="4.2.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
         <PackageReference Include="System.Management.Automation" Version="7.2.2" />
     <PackageReference Include="coverlet.collector" Version="3.1.0">
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="xunit" Version="2.4.2-pre.12" />
 </ItemGroup>
         
     

@@ -1,11 +1,14 @@
 module AddSevenFSTest
 
 open System.Collections.Generic
+open AddSevenPS
 open Xunit
 open AddSevenFS
 
 
 [<Fact>]
+
+// Sending 1 as input and expecting 8 as result
 let `` AddSeven.addSeven: 1 => 8 `` () =
     let result =  addSeven(1)
     let expected = 8

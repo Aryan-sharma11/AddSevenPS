@@ -2,34 +2,25 @@
 
 open System.Management.Automation
 
-module AddSeven =
-    let addSeven num = num + 7
-     
-    // For testing purpose
-    //  Testing list of integers and then returning the list with solutions  
-    let addSevenToList numList =
-        
-        // Mapping the solutions to the list of test cases
-        numList |> Seq.map addSeven
-
-
-// Cmdlet attribute declaration
-[<Cmdlet("Add", "Seven")>] 
-type GetNum() =
-     
-    // Inheriting the PSCmdlet class
-    inherit PSCmdlet()
-   
+// PowerShell cmdlets required for AddSeven function
+module PS_AddSeven=
     
-    // Allows the cmdlet let to take default input
-    // Positional parameter to allow Cmdlet to take input without specifying the variable
-    [<Parameter(Position = 0)>] 
-    member val Num : string = "" with get , set
-    override this.EndProcessing() =
+    [<Cmdlet("Add", "Seven")>]
+    
+    // Cmdlet attribute declaration
+    type GetNum() =
+        // Inheriting the PSCmdlet class
+        inherit PSCmdlet()
         
-        // Typecasting String to Integer
-        let num = this.Num |> int
-        
-        this.WriteObject( AddSeven.addSeven (num) )
-        
-        base.EndProcessing()
+        // Allows the cmdlet let to take default input
+        // Positional parameter to allow Cmdlet to take input without specifying the variable
+        [<Parameter(Position = 0)>]
+        member val Num : string = "" with get , set
+        override this.EndProcessing() =
+            
+            // Typecasting String to Integer
+            let num = this.Num |> int
+           
+            this.WriteObject( AddSevenFS.addSeven (num) )
+            
+            base.EndProcessing()
