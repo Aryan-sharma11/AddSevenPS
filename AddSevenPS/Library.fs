@@ -17,10 +17,12 @@ module AddSevenPS=
         [<Parameter(Position = 0)>]
         member val Num : string = "" with get , set
         override this.EndProcessing() =
+                 
+            let mutable result = 0
             
-            // Typecasting String to Integer
-            let num = this.Num |> int
-           
-            this.WriteObject( AddSevenFS.addSeven (num) )
-            
+            if System.Int32.TryParse(this.Num, &result) then
+                this.WriteObject(AddSevenFS.addSeven (result))
+            else
+               this.WriteObject("Please enter a valid integer.")
+                    
             base.EndProcessing()
