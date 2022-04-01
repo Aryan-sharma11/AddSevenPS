@@ -1,9 +1,9 @@
-﻿namespace AddSevenPS
+﻿namespace AddSeven
 
 open System.Management.Automation
 
 // PowerShell cmdlets required for AddSeven function
-module PS_AddSeven=
+module AddSevenPS=
     
     [<Cmdlet("Add", "Seven")>]
     

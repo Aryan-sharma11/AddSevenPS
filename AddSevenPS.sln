@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# 
+#
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AddSevenPS", "AddSevenPS\AddSevenPS.fsproj", "{49984BB5-D987-4043-A6B6-4C09CCD60730}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "tests", "tests\tests.fsproj", "{0C93DBBA-2937-4FBA-9B97-D0EC831B2FB3}"

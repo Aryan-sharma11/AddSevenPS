@@ -1,7 +1,7 @@
 module AddSevenFSTest
 
 open System.Collections.Generic
-open AddSevenPS
+open AddSeven
 open Xunit
 open AddSevenFS
 

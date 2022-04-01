@@ -1,4 +1,5 @@
-namespace AddSevenPS
+namespace AddSeven
+
 module AddSevenFS=
     let addSeven num = num + 7
     
