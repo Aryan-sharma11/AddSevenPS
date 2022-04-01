@@ -9,11 +9,14 @@ Describe 'Add-Seven' {
     }
 
     It 'Works for positive integers' {
-        Add-Seven -1 | Should -Be 8
+        Add-Seven 1 | Should -Be 8
     }
 
     It 'Fails for decimal number' {
         Add-Seven 1.8 | Should -Be "Please enter a valid integer."
     }
-    
+
+    It 'Fails for string input' {
+        Add-Seven "abcd" | Should -Be "Please enter a valid integer."
+    }
 }
