@@ -26,22 +26,3 @@ let `` AddSeven.addSeven on list of integers`` () =
      // Comparing actual results with expected results
      Assert.Equal<IEnumerable<int>>(actual , expected)      
         
-                         
-//------------------------------------------
-
-open TryParserFS
-
-[<Fact>]
-
-// Sending 1 as input and expecting 8 as result
-let `` parseMe integer 213 `` () =
-    let result = parseMe "213"
-    let expected = 213
-    Assert.Equal(expected, result)
-
-
-parseMe "213"
-parseMe "2010-02-22"
-parseMe "3,0"
-parseMe "jslkdfjlkj"
-parseMe "42"
