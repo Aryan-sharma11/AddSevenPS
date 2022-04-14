@@ -18,9 +18,16 @@ module AddSevenPS=
         member val Num : string = "" with get , set
         override this.EndProcessing() =
             
-            // Typecasting String to Integer
-            let num = this.Num |> int
-           
-            this.WriteObject( AddSevenFS.addSeven (num) )
+            // Mutable variable created
+            let mutable result = 0
             
-            base.EndProcessing()
+            // Checking whether the input is valid or not.
+            // Int32 represents a 32-bit signed integer.
+            // TryParse method converts the string representation of a number to its 32-bit signed integer equivalent.
+            if System.Int32.TryParse( this.Num, &result) then
+                this.WriteObject( AddSevenFS.addSeven (result) )
+            
+            else
+               this.WriteObject( "Please enter a valid integer." )
+                    
+            base.EndProcessing() 

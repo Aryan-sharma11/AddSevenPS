@@ -8,10 +8,19 @@
 
 ## Technologies
 
-- .NET core version 6.0.0 
+- .NET core version 6.0.0
 
 - PowerShell core 7.2.1
 
 ## Instructions
 
-- Open PowerShell and go to the scripts directory and type `Add-Seven.ps1`
+```powershell
+# From inside the AddSevenPS folder
+dotnet build
+
+dotnet publish
+
+Import-Module ./AddSevenPS/bin/Debug/net6.0/publish/AddSevenPS.dll
+
+Add-Seven #Enter the number
+```
