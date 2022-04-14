@@ -8,7 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="LibraryTest.fs" />
+    <Compile Include="FunctionsTest.fs" />
+    <Content Include="README.md" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +18,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="NuGet.ProjectModel" Version="6.1.0" />
     <PackageReference Include="coverlet.collector" Version="3.1.0" />
+    <PackageReference Include="Pester" Version="5.3.1" />
   </ItemGroup>
 
   <ItemGroup>

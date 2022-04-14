@@ -1,37 +1,33 @@
-﻿namespace AddSevenPS
+﻿namespace AddSeven
 
 open System.Management.Automation
 
-open System.Management.Automation.Runspaces
-
-module AddSeven =
-    let addSeven num = num + 7
-     
-    // For testing purpose
-    //  Testing list of integers and then returning the list with solutions  
-    let ``Add seven to list`` numList =
-        
-        // Mapping the solutions to the list of test cases
-        numList |> Seq.map addSeven
-
-
-// Cmdlet attribute declaration
-[<Cmdlet("Add", "Seven")>] 
-type GetNum() =
-     
-    // Inheriting the PSCmdlet class
-    inherit PSCmdlet()
-   
+// PowerShell cmdlets required for AddSeven function
+module AddSevenPS=
     
-    // Allows the cmdlet let to take default input
-    // Positional parameter to allow Cmdlet to take input without specifying the variable
-    [<Parameter(Position = 0)>] 
-    member val Num : string = "" with get , set
-    override this.EndProcessing() =
+    [<Cmdlet("Add", "Seven")>]
+    
+    // Cmdlet attribute declaration
+    type GetNum() =
+        // Inheriting the PSCmdlet class
+        inherit PSCmdlet()
         
-        // Typecasting String to Integer
-        let num = this.Num |> int
-        
-        this.WriteObject( AddSeven.addSeven (num) )
-        
-        base.EndProcessing()
+        // Allows the cmdlet let to take default input
+        // Positional parameter to allow Cmdlet to take input without specifying the variable
+        [<Parameter(Position = 0)>]
+        member val Num : string = "" with get , set
+        override this.EndProcessing() =
+            
+            // Mutable variable created
+            let mutable result = 0
+            
+            // Checking whether the input is valid or not.
+            // Int32 represents a 32-bit signed integer.
+            // TryParse method converts the string representation of a number to its 32-bit signed integer equivalent.
+            if System.Int32.TryParse( this.Num, &result) then
+                this.WriteObject( AddSevenFS.addSeven (result) )
+            
+            else
+               this.WriteObject( "Please enter a valid integer." )
+                    
+            base.EndProcessing() 

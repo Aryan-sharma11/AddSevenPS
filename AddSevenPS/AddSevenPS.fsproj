@@ -6,10 +6,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="Functions.fs" />
         <Compile Include="Library.fs" />
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="FsUnit" Version="4.2.0" />
+        <PackageReference Include="FsUnit.xUnit" Version="4.2.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
         <PackageReference Include="System.Management.Automation" Version="7.2.2" />
     <PackageReference Include="coverlet.collector" Version="3.1.0">
