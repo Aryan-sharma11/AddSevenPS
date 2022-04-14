@@ -1,5 +1,5 @@
 BeforeAll {
-    Import-Module ../AddSevenPS/bin/Debug/net6.0/AddSevenPS.dll
+    Import-Module ../AddSevenPS/bin/Debug/net6.0/publish/AddSevenPS.dll
 
 }
 
