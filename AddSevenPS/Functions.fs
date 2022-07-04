@@ -9,3 +9,4 @@ module AddSevenFS=
     
         // Mapping the solutions to the list of test cases
         numList |> Seq.map addSeven
+        
