@@ -55,10 +55,10 @@ jobs:
 
 
   job2:
-    needs: job1
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Workflow 2
-        uses: peter-evans/workflow-dispatch@v1
+        uses: peter-evans/repository-dispatch@v1
         with:
           workflow: dotnet.yml
