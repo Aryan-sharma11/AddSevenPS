@@ -5,10 +5,16 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
+    inputs:
+      trigger-job:
+        description: 'Trigger Job'
+        required: true
+        default: 'false'
 
 jobs:
   build:
-
+    if: ${{ github.event.inputs.trigger-job == 'true' }}
     runs-on: ubuntu-latest
 
     steps:
