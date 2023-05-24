@@ -1,0 +1,20 @@
+on:
+  issue_comment:
+    types: [created]
+  workflow_run:
+    workflows:
+      - '*/.github/workflows/*'
+
+jobs:
+  build:
+    if: github.event.issue.pull_request && contains(github.event.comment.body, '/run')
+
+    steps:
+      - name: Trigger All Workflows
+        run: |
+          echo "Triggering all workflows..."
+          for file in .github/workflows/*.yml; do
+            workflow_name=$(basename "$file")
+            echo "Dispatching workflow: $workflow_name"
+            echo "::repository-dispatch event-type=run-workflow::{\"workflow\":\"$workflow_name\"}"
+          done
