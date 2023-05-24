@@ -52,6 +52,7 @@ jobs:
           sha: ${{ steps.comment-branch.outputs.head_sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
           status: ${{ job.status }}
+<<<<<<< HEAD
 
 
   job2:
@@ -62,3 +63,7 @@ jobs:
         uses: peter-evans/workflow-dispatch@v1
         with:
           workflow: dotnet.yml
+=======
+          done
+          
+>>>>>>> e984cb6 (new change)
